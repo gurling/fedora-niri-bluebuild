@@ -1,13 +1,13 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: template
+name: fedora-niri-bluebuild
 # description will be included in the image's metadata
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 42 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/base-main
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -21,10 +21,39 @@ modules:
     repos:
       copr:
         - atim/starship
+        #- zhangyi6324/noctalia-shell
+        #- errornointernet/quickshell
+        #- brycensranch/gpu-screen-recorder-git
+        - lbarrys/cliphist
+        #- purian23/matugen
+        #- jreilly1821/dms
     install:
       packages:
-        - micro
+        - tailscale
         - starship
+        #- quickshell
+        #- gpu-screen-recorder
+        - cliphist
+        #- matugen
+        #- noctalia-shell
+        #- dms
+        - niri
+        - sddm
+        #- fira-code-fonts
+        #- jetbrains-mono-fonts-all
+        - tlp
+        - powertop
+        - rofi
+        - fuzzel
+        - sddm
+        - wlogout
+        - brightnessctl
+        - polkit-kde
+        - wlsunset
+        - cava
+        - wl-clipboard
+        - qt6-qtmultimedia
+        - nix
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -38,8 +67,39 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
+          - com.github.tchx84.Flatseal
+          - io.github.flattool.Warehouse
+      - scope: user # Add Flathub user repo, with some user packages
+        install:
+          - io.missioncenter.MissionCenter
           - org.mozilla.firefox
-          - org.gnome.Loupe
-      - scope: user # Also add Flathub user repo, but no user packages
+          - com.brave.Browser
+          - com.github.IsmaelMartinez.teams_for_linux
+          - com.discordapp.Discord
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+      - FiraCode # don't add spaces or "Nerd Font" suffix
+      - Terminus
+      - JetBrainsMono
+      - NerdFontsSymbolsOnly
+      google-fonts:
+      - Roboto
+      - Open Sans
+      - Inter
+
+  - type: systemd
+    system:
+      enabled:
+        - sddm.service
+        - tailscaled.service
+
+  - type: os-release
+    properties:
+      ID: fedora_em
+      ID_LIKE: fedora
+      NAME: Fedora Linux Em
+      PRETTY_NAME: Fedora Linux Em (Niri Atomic) 
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
