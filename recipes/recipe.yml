@@ -60,13 +60,13 @@ modules:
         ## Ironbar build dependencies
         - rust
         - cargo
-        #- gtk4-devel
-        #- libadwaita-devel
-        #- pkgconf-pkg-config
+        - gtk4-devel
+        - libadwaita-devel
+        - pkgconf-pkg-config
         - gcc
         - make
         - git
-        - docker-cli
+        #- docker-cli
         ##
 
     remove:

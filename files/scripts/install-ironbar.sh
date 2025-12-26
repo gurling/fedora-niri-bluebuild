@@ -2,8 +2,14 @@
 
 set -euo pipefail
 
-docker run -it -v '.:/app' ghcr.io/jakestanger/ironbar-build /bin/bash
-cd app
-cargo build
+cargo install ironbar \
+	--locked \
+	--root /usr \
 
-rm -rf /root/app /root/.cargo/registry /root/.cargo/git || true
+rm -rf /root/.cargo/registry /root/.cargo/git || true
+
+
+#docker run -it -v '.:/app' ghcr.io/jakestanger/ironbar-build /bin/bash
+#cd app
+#cargo build
+
