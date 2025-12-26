@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-OPENSSL_DIR="/usr/bin/openssl"
+#OPENSSL_DIR="/usr/bin"
 
 git clone https://github.com/jakestanger/ironbar.git
 cd ironbar

@@ -38,7 +38,6 @@ modules:
         #- noctalia-shell
         #- dms
         - niri
-        - sddm
         #- fira-code-fonts
         #- jetbrains-mono-fonts-all
         - tlp
@@ -66,6 +65,7 @@ modules:
         - gcc
         - make
         - git
+        - openssl-devel
         #- docker-cli
         ##
 
