@@ -6,18 +6,18 @@ set -euo pipefail
 
 dnf -y install rust cargo git luajit lua-lgi  gtk4 gtk-layer-shell gtk4-devel gtk4-layer-shell-devel dbus-devel pkgconf-pkg-config openssl-devel pulseaudio-libs-devel libinput-devel luajit-devel libevdev-devel kmod-devel systemd-udev systemd-udev
 
-git clone https://github.com/jakestanger/ironbar.git
-cd ironbar
-cargo build --release --locked --no-default-features \
-	--features config+all,cli,battery,bluetooth,clock,label,tray,volume,sys_info,notifications,workspaces+niri
+#git clone https://github.com/jakestanger/ironbar.git
+#cd ironbar
+#cargo build --release --locked --no-default-features \
+#	--features config+all,cli,battery,bluetooth,clock,label,tray,volume,sys_info,notifications,workspaces+niri
 # change path to wherever you want to install
-install target/release/ironbar /usr/bin/ironbar
+#install target/release/ironbar /usr/bin/ironbar
 
 
-#cargo install ironbar \
-#	--locked \
-#	--root /usr \
-#
+cargo install ironbar \
+	--locked \
+	--root /usr \
+
 
 
 dnf -y remove rust cargo git gtk4-devel gtk4-layer-shell-devel dbus-devel pkgconf-pkg-config openssl-devel pulseaudio-libs-devel libinput-devel luajit-devel libevdev-devel kmod-devel systemd-udev
