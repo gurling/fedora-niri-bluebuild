@@ -65,8 +65,8 @@ modules:
         #- pkgconf-pkg-config
         - gcc
         - make
-        #- git
-        - docker
+        - git
+        - docker-cli
         ##
 
     remove:
@@ -103,6 +103,7 @@ modules:
       - Roboto
       - Open Sans
       - Inter
+
   - type: script
     scripts:
       - install-ironbar.sh
