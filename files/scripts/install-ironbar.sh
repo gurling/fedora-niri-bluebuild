@@ -4,7 +4,7 @@ set -euo pipefail
 
 #OPENSSL_DIR="/usr/bin"
 
-dnf -y install rust cargo git luajit lua-lgi  gtk4 gtk-layer-shell gtk4-devel gtk4-layer-shell-devel dbus-devel pkgconf-pkg-config openssl-devel pulseaudio-libs-devel libinput-devel luajit-devel libevdev-devel
+dnf -y install rust cargo git luajit lua-lgi  gtk4 gtk-layer-shell gtk4-devel gtk4-layer-shell-devel dbus-devel pkgconf-pkg-config openssl-devel pulseaudio-libs-devel libinput-devel luajit-devel libevdev-devel kmod-devel
 
 git clone https://github.com/jakestanger/ironbar.git
 cd ironbar
@@ -20,7 +20,7 @@ install target/release/ironbar /usr/bin/ironbar
 
 rm -rf /root/.cargo/registry /root/.cargo/git /root/ionbar || true
 
-sudo dnf -y remove rust cargo git gtk4-devel gtk4-layer-shell-devel dbus-devel pkgconf-pkg-config openssl-devel pulseaudio-libs-devel libinput-devel luajit-devel libevdev-devel
+sudo dnf -y remove rust cargo git gtk4-devel gtk4-layer-shell-devel dbus-devel pkgconf-pkg-config openssl-devel pulseaudio-libs-devel libinput-devel luajit-devel libevdev-devel kmod-devel
 
 #docker run -it -v '.:/app' ghcr.io/jakestanger/ironbar-build /bin/bash
 #cd app
