@@ -8,7 +8,7 @@ dnf -y install rust cargo git luajit lua-lgi  gtk4 gtk-layer-shell gtk4-devel gt
 
 git clone https://github.com/jakestanger/ironbar.git
 cd ironbar
-cargo build --release --no-default-features \
+cargo build --release --locked --no-default-features \
 	--features config+all,cli,battery,bluetooth,clock,label,tray,volume,sys_info,notifications,workspaces+niri
 # change path to wherever you want to install
 install target/release/ironbar /usr/bin/ironbar
