@@ -52,6 +52,7 @@ modules:
         ##
         - waypaper
         - wlogout
+        - hyprlock
         - brightnessctl
         - polkit-kde
         - wlsunset
