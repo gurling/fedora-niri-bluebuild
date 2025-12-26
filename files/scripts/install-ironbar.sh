@@ -16,9 +16,9 @@ install target/release/ironbar /usr/bin/ironbar && echo "Ironbar Successfully in
 
 dnf -y remove rust cargo git gtk4-devel gtk4-layer-shell-devel dbus-devel openssl-devel pulseaudio-libs-devel libinput-devel luajit-devel dbus-devel
 
-dnf -y install gtk-layer-shell luajit lua-lgi pkgconf-pkg-config
+dnf -y install gtk4 gtk4-layer-shell luajit lua-lgi pkgconf-pkg-config
 
-rm -rf /root/.cargo/registry /root/.cargo/git /root/ionbar || true
+rm -rf /root/.cargo/registry /root/.cargo/git /root/ironbar || true
 #docker run -it -v '.:/app' ghcr.io/jakestanger/ironbar-build /bin/bash
 #cd app
 #cargo build
