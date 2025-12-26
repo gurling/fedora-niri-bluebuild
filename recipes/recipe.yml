@@ -46,6 +46,10 @@ modules:
         - rofi
         - fuzzel
         - sddm
+        ## Multicolor SDDM Theme Dependencies
+        - fontawesome-fonts-all
+        - impallari-raleway-fonts
+        ##
         - wlogout
         - brightnessctl
         - polkit-kde
@@ -53,7 +57,18 @@ modules:
         - cava
         - wl-clipboard
         - qt6-qtmultimedia
-        - nix
+        ## Ironbar build dependencies
+        - rust
+        - cargo
+        #- gtk4-devel
+        #- libadwaita-devel
+        #- pkgconf-pkg-config
+        - gcc
+        - make
+        #- git
+        - docker
+        ##
+
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -88,6 +103,9 @@ modules:
       - Roboto
       - Open Sans
       - Inter
+  - type: script
+    scripts:
+      - install-ironbar.sh
 
   - type: systemd
     system:
