@@ -27,6 +27,7 @@ modules:
         - lbarrys/cliphist
         #- purian23/matugen
         #- jreilly1821/dms
+        - sdegler/hyprland
     install:
       packages:
         - tailscale
@@ -49,6 +50,7 @@ modules:
         - fontawesome-fonts-all
         - impallari-raleway-fonts
         ##
+        - waypaper
         - wlogout
         - brightnessctl
         - polkit-kde

@@ -19,10 +19,10 @@ install target/release/ironbar /usr/bin/ironbar
 #	--root /usr \
 #
 
-rm -rf /root/.cargo/registry /root/.cargo/git /root/ionbar || true
 
 dnf -y remove rust cargo git gtk4-devel gtk4-layer-shell-devel dbus-devel pkgconf-pkg-config openssl-devel pulseaudio-libs-devel libinput-devel luajit-devel libevdev-devel kmod-devel systemd-udev
 
+rm -rf /root/.cargo/registry /root/.cargo/git /root/ionbar || true
 #docker run -it -v '.:/app' ghcr.io/jakestanger/ironbar-build /bin/bash
 #cd app
 #cargo build
