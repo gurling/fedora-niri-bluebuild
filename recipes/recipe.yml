@@ -57,15 +57,15 @@ modules:
         - wl-clipboard
         - qt6-qtmultimedia
         ## Ironbar build dependencies
-        - rust
-        - cargo
-        - gtk4-devel
-        - libadwaita-devel
-        - pkgconf-pkg-config
-        - gcc
-        - make
-        - git
-        - openssl-devel
+        #- rust
+        #- cargo
+        #- gtk4-devel
+        #- libadwaita-devel
+        #- pkgconf-pkg-config
+        #- gcc
+        #- make
+        #- git
+        #- openssl-devel
         #- docker-cli
         ##
 
