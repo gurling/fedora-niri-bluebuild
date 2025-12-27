@@ -43,6 +43,7 @@ modules:
         #- jetbrains-mono-fonts-all
         - tlp
         - powertop
+        - upower
         - rofi
         - fuzzel
         - sddm
@@ -116,6 +117,7 @@ modules:
       enabled:
         - sddm.service
         - tailscaled.service
+        - upower.service
 
   - type: os-release
     properties:
