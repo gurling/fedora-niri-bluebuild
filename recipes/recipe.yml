@@ -107,10 +107,12 @@ modules:
       - Roboto
       - Open Sans
       - Inter
+      - Fira Sans
 
   - type: script
     scripts:
       - install-ironbar.sh
+      - install-sddm-theme.sh
 
   - type: systemd
     system:

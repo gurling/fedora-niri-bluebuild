@@ -6,7 +6,7 @@ theme="multicolor-sddm-theme"
 
 background="png/palenight-01.png"
 
-font="Firacode Nerd Font"
+font="Fira Sans"
 
 
 git clone https://gitlab.com/dwt1/multicolor-sddm-theme
