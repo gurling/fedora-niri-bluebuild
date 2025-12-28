@@ -15,7 +15,7 @@ rm -rf multicolor-sddm-theme || true
 
 sed -i "s/^#Current=.*/Current=$theme/" /etc/sddm.conf
 
-sed -i "s/^background=.*/background=$background/" /usr/share/sddm/themes/multicolor-sddm-theme/theme.conf
+sed -i "s|^background=.*|background=$background|" /usr/share/sddm/themes/multicolor-sddm-theme/theme.conf
 
 sed -i "s/^displayFont=.*/displayFont=$font/" /usr/share/sddm/themes/multicolor-sddm-theme/theme.conf
 
