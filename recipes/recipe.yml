@@ -46,7 +46,7 @@ modules:
         - upower
         - rofi
         - fuzzel
-        - sddm
+        - sddm-wayland-generic
         ## Multicolor SDDM Theme Dependencies
         - fontawesome-fonts-all
         - impallari-raleway-fonts
