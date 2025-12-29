@@ -19,6 +19,8 @@ modules:
 
   - type: dnf
     repos:
+      files:
+        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       copr:
         - atim/starship
         #- zhangyi6324/noctalia-shell
