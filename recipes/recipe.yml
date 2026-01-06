@@ -62,6 +62,7 @@ modules:
         - cava
         - wl-clipboard
         - qt6-qtmultimedia
+        - pavucontrol
         ## Ironbar build dependencies
         #- rust
         #- cargo
@@ -114,7 +115,7 @@ modules:
   - type: script
     scripts:
       - install-ironbar.sh
-      - install-sddm-theme.sh
+      #- install-sddm-theme.sh
 
   - type: systemd
     system:
