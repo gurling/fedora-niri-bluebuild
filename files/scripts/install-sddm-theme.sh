@@ -2,21 +2,18 @@
 
 set -euo pipefail
 
-theme="multicolor-sddm-theme"
+theme="where_is_my_sddm_theme"
 
-background="png/palenight-01.png"
+git clone https://github.com/stepanzubkov/where-is-my-sddm-theme.git
 
-font='"Fira Sans"'
+sudo cp -r where-is-my-sddm-theme/where_is_my_sddm_theme /usr/share/sddm/themes
 
-
-git clone https://gitlab.com/dwt1/multicolor-sddm-theme
-cp -r multicolor-sddm-theme/ /usr/share/sddm/themes/
-rm -rf multicolor-sddm-theme || true
+rm -rf where-is-my-sddm-theme || true
 
 sed -i "s/^#Current=.*/Current=$theme/" /etc/sddm.conf
 
-sed -i "s|^background=.*|background=$background|" /usr/share/sddm/themes/multicolor-sddm-theme/theme.conf
+git clone https://github.com/catppuccin/where-is-my-sddm-theme.git
 
-sed -i "s/^displayFont=.*/displayFont=$font/" /usr/share/sddm/themes/multicolor-sddm-theme/theme.conf
+mv where-is-my-sddm-theme/themes/catppuccin-frappe.conf /usr/share/sddm/themes/where_is_my_sddm_theme/theme.conf
 
-
+rm -rf where-is-my-sddm-theme || true

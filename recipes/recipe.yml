@@ -50,8 +50,8 @@ modules:
         - fuzzel
         - sddm-wayland-generic
         ## Multicolor SDDM Theme Dependencies
-        - fontawesome-fonts-all
-        - impallari-raleway-fonts
+        #- fontawesome-fonts-all
+        #- impallari-raleway-fonts
         ##
         - waypaper
         - wlogout
@@ -63,18 +63,6 @@ modules:
         - wl-clipboard
         - qt6-qtmultimedia
         - pavucontrol
-        ## Ironbar build dependencies
-        #- rust
-        #- cargo
-        #- gtk4-devel
-        #- libadwaita-devel
-        #- pkgconf-pkg-config
-        #- gcc
-        #- make
-        #- git
-        #- openssl-devel
-        #- docker-cli
-        ##
 
     remove:
       packages:
@@ -115,7 +103,7 @@ modules:
   - type: script
     scripts:
       - install-ironbar.sh
-      #- install-sddm-theme.sh
+      - install-sddm-theme.sh
 
   - type: systemd
     system:
